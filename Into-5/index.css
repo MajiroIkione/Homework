@@ -1,0 +1,25 @@
+div,span{
+    color: #ffffff;
+}
+.block{
+    background: #c687e3;
+    color: #000000;
+    width: 300px;
+}
+.brown{
+    background: #433000;
+    color: #000000;
+    width: 500px;
+}
+.red{
+    background: #bd1d1d;
+    width: 100px;
+    height: 100px
+}
+.purple{
+    background: #752796;
+    
+}
+.pink{
+    color: #e2a8ce;
+}
