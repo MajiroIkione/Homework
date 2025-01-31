@@ -1,0 +1,46 @@
+/* 1-ое задание---------------------------------- */
+.sqr {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+#new {
+    background: green;
+}
+div.sqr {
+    background: pink;
+}
+
+
+/* 2-ое задание---------------------------------- */
+div {
+    color: black;
+}
+.purple{
+    color: blueviolet;
+}
+#teal{
+    color: teal;
+}
+[crat="value1"]{
+    color: #d52222;
+}
+.purple4, .purple5, .purple6{
+    font-size: 12px;
+}
+
+span.green-block{
+    color: chartreuse;
+}
+.main>.sub{
+    font-family: "Balsamiq Sans", serif;
+}
+div .fad{
+    color: blue;
+}
+/* 3-ье задание ----------------------------------*/
+.some-text {
+    font-family: "sads", "Balsamiq Sans", sans-serif;
+    line-height: -100px;
+
+}
