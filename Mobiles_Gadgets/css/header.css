@@ -1,0 +1,218 @@
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    font-family: var(--font-main);
+    margin:0 30px 20px 0;
+    gap: 15px;
+}
+
+.header__logo svg {
+    width: 100%;
+}
+
+.nav__list {
+    display: flex;
+    gap: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+.nav__item{
+
+    transition: var(--transition);
+    position: relative;
+
+}
+.nav__item:hover.nav__item:before{
+    transform: translateY(0);
+}
+.nav__item:before{
+    position: absolute;
+    content: '';
+    top: -37px;
+    left: -4px;
+    background: #e7e9eaba;
+    width: 122%;
+    height: 74px;
+    transform: translateY(-120px);
+    transition: var(--transition);
+    filter: blur(1px);
+    z-index: -1;
+}
+/* //////////////Drop menu */
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background: #fff;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+}
+
+.dropdown-content li,
+.dropBurg-content li {
+    padding: 16px 16px;
+    list-style: none;
+}
+
+.dropdown-content li a,
+.dropBurg-content li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: relative;
+}
+.dropdown-content li:hover{
+    text-decoration: none;
+    color: black;
+    display: block;
+    background: #e7e9eaba;
+}
+.dropBurg-content li:before{
+    position: absolute;
+    content: '';
+    left: 100px;
+    right: -100px;
+    background: #e7e9eaba;
+    max-width: -webkit-fill-available;
+    width: 100%;
+    height: 52px;
+    transform: translate(200px,-19px);
+    transition: var(--transition);
+    filter: blur(1px);
+}
+.dropBurg-content li:hover:before{
+    transform: translate(-100px,-19px);
+}
+.dropdown-content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+/* //////////////// */
+
+.header__action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.burger__btn {
+    display: none;
+    width: 38px;
+    height: 21px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger__btn::before,
+.burger__btn i,
+.burger__btn::after {
+    content: '';
+    width: 30px;
+    height: 2.4px;
+    background: #000;
+    border-radius: 20px;
+}
+
+.burger__btn i {
+    overflow-y: 1;
+
+}
+
+.burger__btn--active i {
+    display: none;
+
+}
+
+.burger__btn--active::before {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 16px;
+    transform: rotate(45deg);
+    z-index: 3;
+
+}
+
+.burger__btn--active::after {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 16px;
+    transform: rotate(-45deg);
+    z-index: 3;
+}
+
+/* //////////////////////////////////////////Burger Menu */
+.burger__menu {
+    background: #ffffff;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: ease .3s;
+    box-shadow: -4px 14px 27px 0px rgba(0, 0, 0, 0.17);
+    z-index: 2;
+}
+
+.burger__item {
+    font-size: 17px;
+    padding: 26px;
+    text-transform: uppercase;
+}
+.burger__item:hover:before{
+    transform: translate(-100px, -19px);
+}
+.burger__item:before{
+    position: absolute;
+    content: '';
+    left: 100px;
+    right: -100px;
+    background: #e7e9eaba;
+    max-width: -webkit-fill-available;
+    width: 100%;
+    height: 55px;
+    transform: translate(200px,-19px);
+    transition: var(--transition);
+    filter: blur(1px);
+    z-index: -1;
+}
+.show {
+    right: 0;
+}
+
+/* ///////////////////////////Burger Drop Menu */
+.dropBurg-content {
+    display: none;
+    background: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+.dropBurg-content.opened {
+    display: block;
+}
+
